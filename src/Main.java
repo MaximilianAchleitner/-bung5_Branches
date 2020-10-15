@@ -2,17 +2,11 @@ import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-import java.util.*;
-
-import java.util.ArrayList;
 
 public class Main extends Application{
     public static void main(String[] args) {
@@ -38,6 +32,20 @@ public class Main extends Application{
         ObservableList box_main_list = box_main.getChildren();
 
         box_main_list.addAll(textcels, cels, textfahr, fahr);
+
+        EventHandler<MouseEvent> btn_handler1 = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent e) {
+
+            }
+        };
+
+        EventHandler<MouseEvent> btn_handler2 = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent e) {
+
+            }
+        };
 
         Scene scene = new Scene(box_main, 220, 220);
         stage.setTitle("Temperature Converter");
