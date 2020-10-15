@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
@@ -46,6 +47,11 @@ public class Main extends Application{
 
             }
         };
+
+        Button btn1 = new Button("Convert °C -> °F");
+        Button btn2 = new Button("Convert °F -> °C");
+
+        box_main_list.addAll(btn1, btn2);
 
         Scene scene = new Scene(box_main, 220, 220);
         stage.setTitle("Temperature Converter");
