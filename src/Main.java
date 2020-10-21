@@ -46,16 +46,16 @@ public class Main extends Application{
         EventHandler<MouseEvent> btn_handler2 = new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent e) {
-
+                int f = Integer.parseInt(fahr.getText());
+                double c = (f -32)/1.8;
+                cels.setText(String.valueOf(f));
             }
         };
 
         Button btn1 = new Button("Convert °C -> °F");
         Button btn2 = new Button("Convert °F -> °C");
         btn1.addEventHandler(MouseEvent.MOUSE_CLICKED, btn_handler1);
-
-
-
+        btn2.addEventHandler(MouseEvent.MOUSE_CLICKED, btn_handler2);
         box_main_list.addAll(btn1, btn2);
 
         Scene scene = new Scene(box_main, 220, 220);
